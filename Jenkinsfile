@@ -8,7 +8,8 @@ pipeline {
     stages {
         stage('Remove Port Monitoring') {
             when {
-                expression { return params.Remove_Port_Monitoring }
+                //expression { return params.Remove_Port_Monitoring }
+                expression {true}
             }
             steps {
                 script {
@@ -36,7 +37,8 @@ pipeline {
         }
         stage('Retire Application') {
             when {
-                expression { return params.Retire_Application }
+                //expression { return params.Retire_Application }
+                expression {true}
             }
             steps {
                 script {
@@ -63,7 +65,8 @@ pipeline {
         }
         stage('Remove Application') {
             when {
-                expression { return params.Remove_Application }
+                //expression { return params.Remove_Application }
+                expression {true}
             }
             steps {
                 script {
